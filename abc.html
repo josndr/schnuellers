@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>17 years in the making...</title>
+  <script src="https://kit.fontawesome.com/077db584e7.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #5F8575;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Cormorant Garamond', 'Addington', sans-serif;
+    }
+
+    @font-face {
+      font-family: 'Addington';
+      src: url("./fonts/AddingtonCF-Light.ttf") format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Market Deco';
+      src: url("./fonts/Market_Deco.ttf") format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* cormorant-garamond-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cormorant-garamond-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/cormorant-garamond-v16-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cormorant-garamond-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/cormorant-garamond-v16-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cormorant-garamond-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./fonts/cormorant-garamond-v16-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+    figure {
+      padding: 5px;
+      max-width: 75%;
+      max-height: 75%;
+      margin: 0 auto; /* Center the figure */
+    }
+
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      display: block;
+      caption-side: bottom;
+      padding: 5px 5px 5px;
+      text-align: center;
+      width: 100%;
+      font-size: 3vw;
+    /*  color: white;*/
+      font-family: 'Addington', 'Cormorant Garamond', serif;
+    }
+
+    @media (max-width: 768px) {
+      figcaption {
+        font-size: 4vw;
+      }
+
+      figcaption p span {
+        display: block;
+        text-align: center;
+        margin: 5px 0; /* Add margin for better spacing */
+      }
+    }
+
+
+    @media (min-width: 769px) {
+      figcaption p {
+        text-align: center;
+      }
+
+      figcaption p span {
+        display: inline-block;
+        margin: 0 15px; /* Add spacing between spans */
+      }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      max-width: 65ch; /* Limit the width to 65 characters */
+    }
+
+    .block img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .block h2 {
+      margin: 10px 0;
+      font-family: 'Market Deco', sans-serif ;
+    }
+
+    .block p {
+      margin: 10px 0;
+    }
+
+    .block.white {
+      color: white;
+    }
+
+    .block.black {
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Ensure the container takes up the full width */
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .figure-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (min-width: 769px) {
+      .blocks {
+        display: flex;
+        justify-content: center; /* Center the blocks horizontally */
+        gap: 20px; /* Add sufficient distance between the blocks */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class=""figure-wrapper>
+  <figure>
+    <img src="Logoblack.png" alt="Centered Image">
+    <figcaption>
+      <p>
+        <span> 49°27'4"N&nbsp;11°4'44"E&nbsp;&nbsp;<a target="_blank" href="https://lorenzkirche.de/besuchen/"><i class="fa-solid fa-church"></i></a></span>
+        <span><a target="_blank" href="https://humbserundfreunde.de/galerie/"><i class="fa-solid fa-champagne-glasses"></i></a>&nbsp;&nbsp;49°28'1"N&nbsp;10°59'8"E</span>
+      </p>
+    </figcaption>
+  </figure></div>
+  <div class="blocks">
+    <div class="block black">
+      <p><span><i class="fa-solid fa-wine-glass"></i>&nbsp;&nbsp;<i class="fa-solid fa-handshake-simple"></i>&nbsp;&nbsp;<i class="fa-solid fa-music"></i></span></p>
+      <h2>Celebrate</h2>
+      <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod sed mauris a lobortis. Quisque aliquam condimentum justo vel sagittis. Nam quis velit ante. Fusce vitae nulla eu diam sodales molestie aliquam eget diam. Curabitur tincidunt metus eget risus finibus placerat. Cras ullamcorper augue eu tellus faucibus facilisis. Sed tincidunt nunc vel turpis elementum luctus. Proin ac faucibus erat. Curabitur velit metus, sagittis in nisi eget, consequat imperdiet mi. Proin consectetur, purus ac posuere interdum, erat nisi blandit enim, in feugiat tellus nulla sit amet arcu.</b></p>
+    </div>
+    <div class="block white">
+      <p><span><i class="fa-solid fa-bed"></i>&nbsp;&nbsp;<i class="fa-solid fa-hotel"></i>&nbsp;&nbsp;<i class="fa-solid fa-moon"></i></span></p>
+      <h2>Sleep</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod sed mauris a lobortis. Quisque aliquam condimentum justo vel sagittis. Nam quis velit ante. Fusce vitae nulla eu diam sodales molestie aliquam eget diam. Curabitur tincidunt metus eget risus finibus placerat. Cras ullamcorper augue eu tellus faucibus facilisis. Sed tincidunt nunc vel turpis elementum luctus. Proin ac faucibus erat. Curabitur velit metus, sagittis in nisi eget, consequat imperdiet mi. Proin consectetur, purus ac posuere interdum, erat nisi blandit enim, in feugiat tellus nulla sit amet arcu.</p>
+    </div>
+    <div class="block black">
+        <p><span><i class="fa-solid fa-circle-question"></i>&nbsp;&nbsp;<i class="fa-solid fa-lightbulb"></i>&nbsp;&nbsp;<i class="fa-solid fa-circle-info"></i></span></p>
+        <h2>Know</h2>
+        <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod sed mauris a lobortis. Quisque aliquam condimentum justo vel sagittis. Nam quis velit ante. Fusce vitae nulla eu diam sodales molestie aliquam eget diam. Curabitur tincidunt metus eget risus finibus placerat. Cras ullamcorper augue eu tellus faucibus facilisis. Sed tincidunt nunc vel turpis elementum luctus. Proin ac faucibus erat. Curabitur velit metus, sagittis in nisi eget, consequat imperdiet mi. Proin consectetur, purus ac posuere interdum, erat nisi blandit enim, in feugiat tellus nulla sit amet arcu.</b></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+</body>
+</html>
