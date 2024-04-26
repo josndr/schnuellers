@@ -5,29 +5,68 @@
   <script src="https://kit.fontawesome.com/077db584e7.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
     body {
       background-color: #5F8575;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
-      font-family: 'Addington', sans-serif;
+      font-family: 'Cormorant Garamond', 'Addington', sans-serif;
     }
 
     @font-face {
       font-family: 'Addington';
-      src: url("https://josndr.github.io/schnuellers/AddingtonCF-Light.ttf") format('truetype');
+      src: url("./fonts/AddingtonCF-Light.ttf") format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Market Deco';
+      src: url("./fonts/Market_Deco.ttf") format('truetype');
       font-weight: normal;
       font-style: normal;
     }
 
+    /* cormorant-garamond-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cormorant-garamond-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/cormorant-garamond-v16-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cormorant-garamond-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/cormorant-garamond-v16-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cormorant-garamond-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./fonts/cormorant-garamond-v16-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
     figure {
-      display: table;
       padding: 5px;
       max-width: 75%;
       max-height: 75%;
+      margin: 0 auto; /* Center the figure */
     }
 
     img {
@@ -41,7 +80,7 @@
       text-align: center;
       width: 100%;
       font-size: 3vw;
-/*      color: white;*/
+    /*  color: white;*/
       font-family: 'Addington', 'Cormorant Garamond', serif;
     }
 
@@ -57,11 +96,6 @@
       }
     }
 
-/*    @media (max-width: 900px) {
-          figcaption p span:nth-child(2) {
-        display: none; /* Hide the middle span */
-      }
-    }*/
 
     @media (min-width: 769px) {
       figcaption p {
@@ -72,18 +106,149 @@
         display: inline-block;
         margin: 0 15px; /* Add spacing between spans */
       }
-
-
     }
 
     a {
         text-decoration: none;
         color: black;
-      }
+    }
 
+    ul {
+  list-style: none ;
+}
+
+.centered-text {
+  display: block;
+  text-align: center;
+}
+
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      max-width: 65ch; /* Limit the width to 65 characters */
+      flex: 1; /* Distribute available space equally among sub-containers */
+      border: 1px solid white;
+      border-radius: 30px;
+    }
+
+    .block img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .block h2 {
+      margin: 10px 0;
+      font-family: 'Market Deco', sans-serif ;
+    }
+
+    .block p {
+      margin: 10px 0;
+    }
+
+    .block.white {
+      color: white;
+    }
+
+    .block.black {
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Ensure the container takes up the full width */
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .figure-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (min-width: 769px) {
+      .blocks {
+        display: flex;
+        justify-content: center; /* Center the blocks horizontally */
+        align-items: flex-start; /* Align top lines of blocks */
+        gap: 20px; /* Add sufficient distance between the blocks */
+        padding: 10px;
+      }
+    }
+
+        /* Styles for the subsection */
+    .subsection {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+    }
+
+    /* Styles for the columns within each subsection */
+    .subsection .columns {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .subsection .columns p {
+      margin: 0;
+      /* display: flex; */
+      /* align-items: center; /*Vertically center the text */
+    }
+
+    /* Set column widths */
+    .subsection .columns .time {
+      width: 31%;
+      font-weight: bold;
+    }
+
+    .subsection .columns .action {
+        width: 50%;
+      color: white;
+      /* text-align: center; Center the text horizontally */
+      /* display: flex;
+      flex-direction: column;
+      align-items: center; Vertically center the text */
+    }
+
+    .subsection .columns .location {
+      width: 19%;
+    }
+
+    /* Button styles */
+    .rsvp-button {
+            display: block;
+            margin: 0 auto; /* Center horizontally */
+            padding: 15px 30px;
+            font-size: 25px;
+            background-color: white;
+            color: #5F8575;
+            border: 10px solid black;
+            border-radius: 30px;
+            border-width: thick;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Market Deco', sans-serif ;
+        }
+
+        .rsvp-button:hover {
+            background-color: #5F8575;
+            color: white;
+            border: 5px solid white;
+        }
+    </style>
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class=""figure-wrapper>
   <figure>
     <img src="Logoblack.png" alt="Centered Image">
     <figcaption>
@@ -92,6 +257,75 @@
         <span><a target="_blank" href="https://humbserundfreunde.de/galerie/"><i class="fa-solid fa-champagne-glasses"></i></a>&nbsp;&nbsp;49°28'1"N&nbsp;10°59'8"E</span>
       </p>
     </figcaption>
-  </figure>
+  </figure></div>
+  <a href="https://forms.gle/hm7oStkjXZrLm1uS9" target="_blank" class="rsvp-button">RSVP here</a><br>
+  <div class="blocks">
+    <div class="block black">
+      <p><span><i class="fa-solid fa-wine-glass"></i>&nbsp;&nbsp;<i class="fa-solid fa-handshake-simple"></i>&nbsp;&nbsp;<i class="fa-solid fa-music"></i></span></p>
+      <h2>Celebrate</h2>
+      <div class="subsection">
+        <h3>Night Before</h3>
+        <div class="columns">
+          <p class="time">20:24 - 12:10 Uhr </p>
+          <p class="action">wein, wurst, wilkommen</p>
+          <p class="location">Adler, F'aurach</p>
+        </div>
+        <h3>Hochzeitstag</h3> 
+        <div class="columns">
+            <p class="time">12:10 Uhr</p>
+            <p class="action">I do, I do, I do!</p>
+            <p class="location">St Lorenz, N&uuml;rnberg</p>
+          </div><br>
+          <div class="columns">
+            <p class="time">after</p>
+            <p class="action">balloons, bubbles, brezn</p>
+            <p class="location">Pfarrhof</p>
+          </div><br>
+          <div class="columns">
+            <p class="time">ab 15 Uhr</p>
+            <p class="action">food, funk, feiern</p>
+            <p class="location">Humbser, F&uuml;rth</p>
+          </div>
+        
+       
+        <h3>Morning After</h3>
+          <div class="columns">
+                <p class="time">12:10 Uhr</p>
+                <p class="action">kaffee, kater, k&auml;se</p>
+                <p class="location">Adler, F'aurach</p>
+              </div>
+      </div> 
+</div>
+    
+    <div class="block white">
+      <p><span><i class="fa-solid fa-bed"></i>&nbsp;&nbsp;<i class="fa-solid fa-hotel"></i>&nbsp;&nbsp;<i class="fa-solid fa-moon"></i></span></p>
+      <h2>Sleep</h2>
+      <span style="align-items: flex-start">
+        <h3>nh Hotel F&uuml;rth</h3>
+        <ul>
+        <li><i class="fa-solid fa-shoe-prints"></i>&nbsp;&nbsp; 12.10 Minuten zum Humbser </li><br>
+        <li><i class="fa fa-subway" aria-hidden="true"></i>&nbsp;&nbsp;  20 Minuten zur Kirche  </li><br>
+        <li><i class="fa-solid fa-taxi"></i>&nbsp;&nbsp;  24 Minuten zum Adler </li>(wir k&uuml;mmern uns um shuttle)</ul>
+
+        <p>Zur Zimmerbuchung &uuml;ber unser Kontingent:<br> <a href="https://www.nh-hotels.com/de/event/hochzeitskontingent-the-schnuellers-" target="_blank"> nh Schnuellerseite</a><br><br> Kinder unter 12 &uuml;bernachten kostenlos. Bitte "weitere Informationen" auf der nh Buchungsseite beachten</p>
+        
+      </span>
+  </div>
+    <div class="block black">
+        <p><span><i class="fa-solid fa-circle-question"></i>&nbsp;&nbsp;<i class="fa-solid fa-lightbulb"></i>&nbsp;&nbsp;<i class="fa-solid fa-circle-info"></i></span></p>
+        <h2>Know</h2>
+        <span style="align-items: flex-start">
+        <p><b>Drescode: </b><span style="color:white">festlich</span></p>
+        <p><b>Trauzeugen L:</b><span style="color:white"> Maria &amp; Julia</span></p>
+        <p><b>Trauzeugen J:</b><span style="color:white"> Dominik &amp; Matti</span></p>
+        
+        <h3>Kontakt</h3>
+        <p><b>Trauzeugen</b></p><a href="mailto:bestpeople@theschnuellers.com"><span style="color:white">bestpeople@theschnuellers.com</a><br>
+          <p><b>Brautpaar</b></p>
+          <a href="mailto:jl@theschnuellers.com"><span style="color:white">jl@theschnuellers.com</a> (oder wie &uuml;blich)</span>
+    </div>
+  </div>
+  &nbsp;
+</div>
 </body>
 </html>
