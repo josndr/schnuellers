@@ -115,7 +115,14 @@
 
     ul {
   list-style: none ;
+  font-family: 'Addington', 'Cormorant Garamond', serif;
+      font-size: medium;
 }
+
+    p {
+      font-family: 'Addington', 'Cormorant Garamond', serif;
+      font-size: medium;
+    }
 
 .centered-text {
   display: block;
@@ -134,6 +141,7 @@
       flex: 1; /* Distribute available space equally among sub-containers */
       border: 1px solid white;
       border-radius: 30px;
+      margin-bottom: 20px; /* Adjust the spacing as needed */
     }
 
     .block img {
@@ -172,13 +180,15 @@
       width: 100%;
     }
 
-    @media (min-width: 769px) {
+    .blocks {padding: 5px}
+
+    @media (min-width: 768px) {
       .blocks {
         display: flex;
         justify-content: center; /* Center the blocks horizontally */
         align-items: flex-start; /* Align top lines of blocks */
         gap: 20px; /* Add sufficient distance between the blocks */
-        padding: 10px;
+        padding: 6px;
       }
     }
 
@@ -187,7 +197,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 3rem;
+      /* margin-bottom: 3rem; */
     }
 
     /* Styles for the columns within each subsection */
@@ -207,6 +217,7 @@
     .subsection .columns .time {
       width: 31%;
       font-weight: bold;
+      /* font-size: small; */
     }
 
     .subsection .columns .action {
@@ -220,6 +231,7 @@
 
     .subsection .columns .location {
       width: 19%;
+      /* font-size: small; */
     }
 
     /* Button styles */
@@ -266,7 +278,7 @@
       <div class="subsection">
         <h3>Night Before</h3>
         <div class="columns">
-          <p class="time">20:24 - 12:10 Uhr </p>
+          <p class="time">20:24 - 12:10&nbsp;Uhr </p>
           <p class="action">wein, wurst, wilkommen</p>
           <p class="location">Adler, F'aurach</p>
         </div>
@@ -274,7 +286,7 @@
         <div class="columns">
             <p class="time">12:10 Uhr</p>
             <p class="action">I do, I do, I do!</p>
-            <p class="location">St Lorenz, N&uuml;rnberg</p>
+            <p class="location">St.Lorenz, N&uuml;rnberg</p>
           </div><br>
           <div class="columns">
             <p class="time">after</p>
